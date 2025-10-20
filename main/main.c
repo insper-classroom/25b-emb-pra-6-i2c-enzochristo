@@ -100,7 +100,7 @@ void mpu6050_task(void *p) {
     
     FusionAhrsUpdateNoMagnetometer(&ahrs, gyroscope, accelerometer, SAMPLE_PERIOD);
 
-    const FusionEuler euler = FusionQuaternionToEuler(FusionAhrsGetQuaternion(&ahrs));
+    // const FusionEuler euler = FusionQuaternionToEuler(FusionAhrsGetQuaternion(&ahrs));
 
     // nos passamos a velocidade angular, pense no caso em que estamos mudando na tela
     // e do nada paramos de mexer. Ele vai detectar isso por conta da velocidade e nao pela posicao.
